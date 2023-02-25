@@ -1,0 +1,46 @@
+@import "default_variables";
+
+.footer {
+  margin-top: 133px;
+
+  .footer__contacts {
+    @extend %content-center;
+    height: 120px;
+    background-color: $white;
+    .footer_center {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .footer__social-media {
+        display: flex;
+
+        .footer__icon {
+          @extend %content-center;
+          cursor: pointer;
+          width: 45px;
+          height: 45px;
+          border-radius: 50%;
+          border: 2px solid $green;
+          box-sizing: border-box;
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+
+  .privacy-policy {
+    @extend %content-center;
+    height: 64px;
+    .footer-center {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 14px;
+      color: $dark-gray;
+    }
+  }
+}
+

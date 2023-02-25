@@ -33,6 +33,7 @@
 
     .logo {
       @extend %content-center;
+      cursor: pointer;
 
       .logo__company-name {
         color: $green;
@@ -42,23 +43,6 @@
         letter-spacing: 0.1em;
         text-transform: uppercase;
         margin-left: 20px;
-      }
-    }
-
-    .feedback {
-      @extend %content-center;
-
-      .feedback__phone-number {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 19px;
-      }
-
-      button {
-        background-color: transparent;
-        border: 2px solid $green;
-
-        margin-left: 40px;
       }
     }
   }

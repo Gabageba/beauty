@@ -18,4 +18,19 @@ body {
   background: transparent;
 }
 
+.feedback {
+  @extend %content-center;
 
+  .feedback__phone-number {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  button {
+    background-color: transparent;
+    border: 2px solid $green;
+
+    margin-left: 40px;
+  }
+}
