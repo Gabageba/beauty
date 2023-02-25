@@ -1,0 +1,45 @@
+@import "default_variables";
+
+.header {
+  background-color: $white;
+  border-bottom: 1px solid $gray;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  @extend %content-center;
+
+  .header_center {
+    display: flex;
+    justify-content: space-between;
+
+    .logo {
+      @extend %content-center;
+
+      .logo__company-name {
+        color: $green;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 42px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        margin-left: 20px;
+      }
+    }
+
+    .feedback {
+      @extend %content-center;
+
+      .feedback__phone-number {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+      }
+
+      button {
+        background-color: transparent;
+        border: 2px solid $green;
+
+        margin-left: 40px;
+      }
+    }
+  }
+}

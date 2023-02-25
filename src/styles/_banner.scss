@@ -1,0 +1,67 @@
+
+@import "default_variables";
+.banner {
+  height: 604px;
+  background-color: $green;
+  overflow: hidden;
+  @extend %content-center;
+
+  .banner_center {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    position: relative;
+
+    .banner__main-info {
+      width: 308px;
+
+      .title {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 56px;
+        color: $white;
+        margin-bottom: 50px;
+      }
+
+      .sub-title {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: $white;
+        margin-bottom: 50px;
+      }
+
+      button {
+        color: $white;
+        border: 2px solid $white;
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+        letter-spacing: 0.05em;
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+    }
+
+    .banner__image {
+      position: absolute;
+      right: -70px;
+      .banner__light-green-ellipse {
+        width: 859px;
+        height: 859px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.3);
+        @extend %content-center;
+
+        .banner__green-ellipse {
+          border-radius: 50%;
+          width: 677px;
+          height: 677px;
+          background: rgba(255, 255, 255, 0.4);
+          @extend %content-center;
+
+        }
+      }
+    }
+  }
+}

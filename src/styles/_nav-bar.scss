@@ -1,0 +1,19 @@
+@import "default_variables";
+
+.nav-bar {
+  background-color: $white;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  @extend %content-center;
+  ul {
+    @extend %content-center;
+
+    li {
+      margin-right: 40px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      cursor: pointer;
+    }
+  }
+}

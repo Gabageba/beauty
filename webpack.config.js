@@ -12,6 +12,9 @@ module.exports = {
     assetModuleFilename: 'assets/[hash][ext][query]',
     clean: true
   },
+  devServer: {
+    port: 3000,
+  },
   plugins: [
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css'
@@ -24,7 +27,7 @@ module.exports = {
     rules: [
       {
         test: /\.html$/i,
-        loader: "html-loader",
+        loader: 'html-loader',
       },
       {
         test: /\.(sa|sc|c)ss$/,
@@ -32,12 +35,12 @@ module.exports = {
           (mode === 'development') ? 'style-loader' : MiniCssExtractPlugin.loader,
           'css-loader',
           {
-            loader: "postcss-loader",
+            loader: 'postcss-loader',
             options: {
               postcssOptions: {
                 plugins: [
                   [
-                    "postcss-preset-env",
+                    'postcss-preset-env',
                     {
                       // Options
                     },

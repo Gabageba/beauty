@@ -1,0 +1,19 @@
+.about-block {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    li {
+      font-weight: 400;
+      margin-right: 30px;
+      cursor: pointer;
+    }
+  }
+}
