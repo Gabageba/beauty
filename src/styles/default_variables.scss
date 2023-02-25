@@ -1,9 +1,26 @@
 $gray: #EFEFEF;
 $white: #FFF;
 $green: #66C05D;
+$darken-gray: #C4C4C4;
 
 %content-center {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@mixin input-placeholder-color($color) {
+  &::-webkit-input-placeholder{
+    color: $color;
+  }
+
+  &:-moz-placeholder {
+    color:    $color;
+  }
+  &::-moz-placeholder {
+    color:    $color;
+  }
+  &:-ms-input-placeholder {
+    color:    $color;
+  }
 }

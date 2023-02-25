@@ -1,0 +1,187 @@
+@import "default_variables";
+
+.banner {
+  @extend %content-center;
+  height: 604px;
+  background-color: $green;
+  overflow: hidden;
+
+  .banner_center {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    position: relative;
+
+    .banner__main-info {
+      width: 308px;
+
+      .title {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 56px;
+        color: $white;
+        margin-bottom: 50px;
+      }
+
+      .sub-title {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: $white;
+        margin-bottom: 50px;
+      }
+
+      button {
+        color: $white;
+        border: 2px solid $white;
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+        letter-spacing: 0.05em;
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+    }
+
+    .banner__image {
+      position: absolute;
+      right: -70px;
+
+      .banner__light-green-ellipse {
+        @extend %content-center;
+        width: 859px;
+        height: 859px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.3);
+
+        .banner__green-ellipse {
+          @extend %content-center;
+          border-radius: 50%;
+          width: 677px;
+          height: 677px;
+          background: rgba(255, 255, 255, 0.4);
+        }
+      }
+    }
+  }
+}
+
+.special-offers {
+  @extend %content-center;
+  margin-top: 60px;
+
+  .special-offers__title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+
+    h2 {
+      margin-top: 10px;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 28px;
+    }
+
+    img {
+      margin-right: 45px;
+    }
+  }
+
+  .special-offers__product {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+
+    .special-offers__card {
+      background-color: $white;
+      @extend %content-center;
+      //padding: 25px 30px;
+      width: 255px;
+      height: 363px;
+      flex-direction: column;
+
+      img {
+        margin-bottom: 20px;
+      }
+
+      .special-offers__name {
+        width: 195px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .special-offers__price {
+        font-weight: 500;
+        font-size: 21px;
+        line-height: 25px;
+        text-align: center;
+        letter-spacing: 0.05em;
+        margin-bottom: 20px;
+      }
+
+      button {
+        padding: 9px 40px;
+        border-radius: 30px;
+        background-color: $green;
+        color: $white
+      }
+    }
+  }
+}
+
+.info {
+  @extend %content-center;
+  margin-top: 100px;
+
+  .info__card-block {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+
+    .info__card {
+      display: flex;
+      background-color: $green;
+      padding: 35px 45px 35px 40px;
+      color: $white;
+      justify-content: space-between;
+      align-items: center;
+
+      h3 {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 21px;
+        margin-bottom: 25px;
+      }
+
+      p {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 25px;
+      }
+
+      input {
+        @include input-placeholder-color($darken-gray);
+        width: 225px;
+        height: 35px;
+        border-radius: 30px;
+        padding-left: 25px;
+        padding-right: 25px;
+        box-sizing: border-box;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        color: $darken-gray;
+      }
+
+      button {
+        padding: 9px 29px;
+        border: 2px solid $white;
+        color: white;
+      }
+    }
+  }
+}
