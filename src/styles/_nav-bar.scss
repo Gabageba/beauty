@@ -1,17 +1,177 @@
 @import "default_variables";
 
-.nav-bar {
+.nav-bar__burger {
+  display: none;
   background-color: $white;
   padding-top: 30px;
   padding-bottom: 30px;
-  @extend %content-center;
+  position: relative;
+
+  @media (max-width: 767px) {
+    display: block;
+  }
+
+  .nav-bar_center {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 675px;
+    margin: 0 auto;
+
+    li {
+      font-weight: 400;
+      font-size: 1em;
+      line-height: 19px;
+      cursor: pointer;
+    }
+  }
+
+  #menuToggle
+  {
+    display: block;
+    position: relative;
+    //right: -1200px;
+
+    z-index: 1;
+
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  #menuToggle a
+  {
+    text-decoration: none;
+    color: #232323;
+
+    transition: color 0.3s ease;
+  }
+
+
+
+  #menuToggle input
+  {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+
+    cursor: pointer;
+
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */
+
+    -webkit-touch-callout: none;
+  }
+
+  /*
+   * Just a quick hamburger
+   */
+  #menuToggle span
+  {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+
+    background: #000;
+    border-radius: 3px;
+
+    z-index: 1;
+
+    transform-origin: 4px 0px;
+
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+    background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+    opacity 0.55s ease;
+  }
+
+  #menuToggle span:first-child
+  {
+    transform-origin: 0% 0%;
+  }
+
+  #menuToggle span:nth-last-child(2)
+  {
+    transform-origin: 0% 100%;
+  }
+
+  #menuToggle input:checked ~ span
+  {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+  }
+
+  #menuToggle input:checked ~ span:nth-last-child(3)
+  {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+
+  #menuToggle input:checked ~ span:nth-last-child(2)
+  {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+
+  #menu
+  {
+    position: absolute;
+    width: 300px;
+    margin: -100px 0 0 -50px;
+    padding: 100px 50px 50px;
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    opacity: 0;
+    scale: 0;
+    transition: opacity 0.5s ease-in-out;
+    top: 70px;
+    right: -30px;
+  }
+
+  #menu li
+  {
+    padding: 10px 0;
+    font-size: 22px;
+  }
+
+  /*
+   * And let's slide it in from the left
+   */
+  #menuToggle input:checked ~ ul
+  {
+    opacity: 1;
+    scale: 100%;
+  }
+}
+
+.nav-bar__full {
+  background-color: $white;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  @media (max-width: 767px) {
+    display: none;
+  }
+
   ul {
     @extend %content-center;
 
     li {
       margin-right: 40px;
       font-weight: 400;
-      font-size: 16px;
+      font-size: 1em;
       line-height: 19px;
       cursor: pointer;
     }

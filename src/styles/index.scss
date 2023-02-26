@@ -1,7 +1,8 @@
 @use 'clear';
-@use 'fonts';
 @use 'global';
 @use 'header';
 @use 'nav-bar';
-@use 'content';
+@use 'content/banner';
+@use 'content/special-offers';
+@use 'content/info';
 @use 'footer';

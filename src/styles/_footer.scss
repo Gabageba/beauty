@@ -3,10 +3,32 @@
 .footer {
   margin-top: 133px;
 
+  @media (max-width: 992px) {
+    .feedback__phone-number {
+      display: none;
+    }
+  }
+  @media (max-width: 992px) {
+    .outline-button {
+      display: none;
+    }
+  }
+
+  @media (max-width: 550px) {
+    .footer__address {
+      display: none;
+    }
+
+    .footer_center {
+      justify-content: center!important;
+    }
+  }
+
   .footer__contacts {
-    @extend %content-center;
-    height: 120px;
+    padding-top: 37px;
+    padding-bottom: 38px;
     background-color: $white;
+
     .footer_center {
       display: flex;
       align-items: center;
@@ -30,8 +52,9 @@
   }
 
   .privacy-policy {
-    @extend %content-center;
-    height: 64px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+
     .footer-center {
       display: flex;
       align-items: center;

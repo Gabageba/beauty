@@ -1,20 +1,19 @@
 @import "default_variables";
 
 .about-block {
-  height: 50px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding-top: 17px;
+  padding-bottom: 16px;
 
   ul {
+    max-width: 447px;
+    margin: auto;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 
     li {
+      font-size: 0.875em;
       font-weight: 400;
-      margin-right: 30px;
       cursor: pointer;
     }
   }
@@ -25,7 +24,41 @@
   border-bottom: 1px solid $gray;
   padding-top: 20px;
   padding-bottom: 20px;
-  @extend %content-center;
+
+  @media (max-width: 767px) {
+    .feedback__phone-number {
+      display: none !important;
+    }
+
+    .logo {
+      img {
+        width: 70px;
+        height: 70px;
+      }
+    }
+
+    .logo__company-name {
+      font-size: 2em !important;
+    }
+  }
+
+  @media (max-width: 550px) {
+    .logo {
+      img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    .logo__company-name {
+      font-size: 1.5em !important;
+    }
+
+    .outline-button {
+      padding: 8px 15px;
+      font-size: 0.75em;
+    }
+  }
 
   .header_center {
     display: flex;
@@ -38,7 +71,7 @@
       .logo__company-name {
         color: $green;
         font-weight: 700;
-        font-size: 36px;
+        font-size: 2.25em;
         line-height: 42px;
         letter-spacing: 0.1em;
         text-transform: uppercase;
