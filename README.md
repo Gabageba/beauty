@@ -1,5 +1,5 @@
 <div align="center">
-<h3 align="center">Сake landing page</h3>
+<h3 align="center">Beauty</h3>
 <p align="center">
   chair shop layout
   <br />
